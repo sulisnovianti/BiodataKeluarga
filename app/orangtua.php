@@ -12,7 +12,7 @@ class orangtua extends Model
     protected $visible = ['Nama_ibu','Nama_ayah','Umur_ibu','Umur_ayah','Alamat'];
 public $timestamps = true;
 
-public function anak (){
+public function anak(){
 	return $this->hasMany('App\Anak', 'orangtua_id');
 }
 }
