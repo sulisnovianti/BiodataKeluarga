@@ -1,6 +1,8 @@
 @extends('layouts.app')
 @section('content')
+<div class="container">
 <div class="row">
+
 	<center><h1>Data Orang Tua</h1></center>
 	<div class="panel panel-primary">
 	<div class="panel-heading">Data OrangTua</div>
@@ -45,8 +47,8 @@
                 <td>
                 	<form action="{{route('orangtua.destroy',$data->id)}}" method="post" >
           
-                		<input name="_method" type="hidden" value="DELETE">
-                		<input name="_token" type="hidden">
+                		<input type="hidden" name="_method"  value="DELETE">
+                		<input type="hidden" name="_token" >
                 		<input class="btn btn-danger" type="submit" value="Delete">
                 		{{csrf_field()}}
                 	</form>
@@ -56,6 +58,7 @@
 			</tbody>
 		</table>
 	</div>
+</div>
 </div>
 </div>
 @endsection
